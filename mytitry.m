@@ -64,14 +64,16 @@ title('Etude comparative du taux d"exactitude PSNR');
 xlabel('Images') % x-axis label
 ylabel('Taux d"exactitude') % y-axis label
 legend('Methode 1','Methode2')
-
+moyen_1ermetricMethod1 = sum(accuracy_rate(:, 1))/length(accuracy_rate(:, 1));
+moyen_1ermetricMethod2 = sum(accuracy_rate(:, 2))/length(accuracy_rate(:, 2));
 figure,
 plot(accuracy_rate2(:, 1),'r');hold on; plot(accuracy_rate2(:, 2),'b');
 title('Etude comparative du taux d"exactitude SSIM');
 xlabel('Images') % x-axis label
 ylabel('Taux d"exactitude') % y-axis label
 legend('Methode 1','Methode2')
-
+moyen_2ermetricMethod1 = sum(accuracy_rate2(:, 1))/length(accuracy_rate2(:, 1));
+moyen_2ermetricMethod2 = sum(accuracy_rate2(:, 2))/length(accuracy_rate2(:, 2));
 
 figure,
 plot(accuracy_rate3(:, 1),'r');hold on; plot(accuracy_rate3(:, 2),'b');
@@ -79,3 +81,5 @@ title('Etude comparative accuracy');
 xlabel('Images') % x-axis label
 ylabel('Taux d"exactitude') % y-axis label
 legend('Methode 1','Methode2')
+moyen_3ermetricMethod1 = sum(accuracy_rate3(:, 1))/length(accuracy_rate3(:, 1));
+moyen_3ermetricMethod2 = sum(accuracy_rate3(:, 2))/length(accuracy_rate3(:, 2));
